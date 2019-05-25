@@ -256,7 +256,7 @@ void parseCommand(String com)
       
       String ch3 = String(EEPROM.read(12));
       word wl3 = word(EEPROM.read(0),EEPROM.read(1));
-      String wlp3 = String(wl);
+      String wlp3 = String(wl3);
       Serial.println(ch3+" "+wlp3);    
       
       String ch5 = String(EEPROM.read(14));
@@ -278,7 +278,7 @@ void parseCommand(String com)
       word wl10 = word(EEPROM.read(8),EEPROM.read(9));
       String wlp10 = String(wl10);
       Serial.println(ch10+" "+wlp10);
-      
+
     }
     else if(part1.equalsIgnoreCase("cpl"))
     {
