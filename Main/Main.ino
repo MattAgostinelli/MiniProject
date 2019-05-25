@@ -251,39 +251,38 @@ void parseCommand(String com)
      Serial.println("You have entered a Channel that does not exist");
     }
     }
-    else if(part1.equalsIgnoreCase("cpl"))
+    else if(part1.equalsIgnoreCase("ccl"))
     {
       
       String ch3 = String(EEPROM.read(12));
-      String ch3p = String(EEPROM.read(13));
-      String ch3o = ch3 + " " + ch3p;
-      Serial.println(ch3o);
-      String ch5 = String(EEPROM.read(14));
-      String ch5p = String(EEPROM.read(15));
-      String ch5o = ch5 + " " + ch5p;
-      Serial.println(ch5o); 
-      String ch6 = String(EEPROM.read(16));
-      String ch6p = String(EEPROM.read(17));
-      String ch6o = ch6 + " " + ch6p;
-      Serial.println(ch6o);
-      String ch9 = String(EEPROM.read(18));
-      String ch9p = String(EEPROM.read(19));
-      String ch9o = ch9 + " " + ch9p;
-      Serial.println(ch9o);
-      String ch10 = String(EEPROM.read(20));
-      String ch10p = String(EEPROM.read(21));
-      String ch10o = ch10 + " " + ch10p;
-      Serial.println(ch10o);
-      //String ch11 = String(EEPROM.read(22));
-      //String ch11p = String(EEPROM.read(23));
-     // String ch11o = ch11 + " " + ch11p;
-      //Serial.println(ch11o);
+      word wl3 = word(EEPROM.read(0),EEPROM.read(1));
+      String wlp3 = String(wl);
+      Serial.println(ch3+" "+wlp3);    
       
-      //Add single channel check
+      String ch5 = String(EEPROM.read(14));
+      word wl5 = word(EEPROM.read(2),EEPROM.read(3));
+      String wlp5 = String(wl5);
+      Serial.println(ch5+" "+wlp5);
+    
+      String ch6 = String(EEPROM.read(16));
+      word wl6 = word(EEPROM.read(4),EEPROM.read(5));
+      String wlp6 = String(wl6);
+      Serial.println(ch6+" "+wlp6);
+      
+      String ch9 = String(EEPROM.read(18));
+      word wl9 = word(EEPROM.read(6),EEPROM.read(7));
+      String wlp9 = String(wl9);
+      Serial.println(ch9+" "+wlp9);
+      
+      String ch10 = String(EEPROM.read(20));
+      word wl10 = word(EEPROM.read(8),EEPROM.read(9));
+      String wlp10 = String(wl10);
+      Serial.println(ch10+" "+wlp10);
+      
     }
-    else if(part1.equalsIgnoreCase("ccl"))
+    else if(part1.equalsIgnoreCase("cpl"))
     {
-       String ch3 = String(EEPROM.read(12));
+      String ch3 = String(EEPROM.read(12));
       String ch3p = String(EEPROM.read(13));
       String ch3o = ch3 + " " + ch3p;
       Serial.println(ch3o);
