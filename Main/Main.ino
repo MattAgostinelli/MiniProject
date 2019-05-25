@@ -291,6 +291,11 @@ void parseCommand(String com)
      String usn = "MA001";
      Serial.println(usn);
     }
+    else if(part1.equalsIgnoreCase("cal"))
+    {
+      String cal = "5-25-2019 MGA"
+      Serial.println(cal);
+    }
     //add more commands
   
   else
