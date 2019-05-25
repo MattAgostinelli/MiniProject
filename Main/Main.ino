@@ -59,9 +59,6 @@ void parseCommand(String com)
     analogWrite(pin,power);
     if(per <=100)
     {
-    //String perpow = String(per);
-    //String output = "Channnel " + part2 + " at Power Level " + perpow + "%";
-    //Serial.println(output);
     Serial.println("OK");
     
     if(pin==3)
@@ -90,12 +87,7 @@ void parseCommand(String com)
       EEPROM.update(20,pin);
       EEPROM.update(21,per);
     }
-    //else if(pin==11)
-    //{
-      //EEPROM.update(22,pin);
-     // EEPROM.update(23,per);
-    //}
-    //add other channels to this list if I need to hook up a mega board.
+       //add other channels to this list if I need to hook up a mega board.
     else if (pin == 0)
     {
 
@@ -125,7 +117,7 @@ void parseCommand(String com)
       EEPROM.update(17,0);
       EEPROM.update(19,0);
       EEPROM.update(21,0);
-      //EEPROM.update(23,0);
+
 
     }  
   }
@@ -193,15 +185,7 @@ void parseCommand(String com)
       EEPROM.update(8,(wlHigh));
       EEPROM.update(9,(wlLow)); 
     }
-     //else if(pin == 11)
-    //{
-      //int pin11wl = pin;
-      //int wl11 = wl;
-      //String outwl = "Channnel " + part2 + " is now " + part3 + "nm";
-      //Serial.println(outwl);
-      //EEPROM.update(10,(wlHigh));
-      //EEPROM.update(11,(wlLow)); 
-    //}
+
     else
     {
       Serial.println("You have entered a Channel that does not exist");
@@ -243,12 +227,7 @@ void parseCommand(String com)
       String wlp = String(wl);
       Serial.println(wlp);
     }
-    //else if(pin == 11)
-    //{
-      //word wl = word(EEPROM.read(10),EEPROM.read(11));
-      //String wlp = String(wl);
-      //Serial.println(wlp);
-    //}
+
     else
     {
      Serial.println("You have entered a Channel that does not exist");
@@ -309,7 +288,6 @@ void parseCommand(String com)
     }
     else if(part1.equalsIgnoreCase("usn"))
     {
-     //I need to be able to save this into memory, maybe initialize in firmware..... or by command
      String usn = "MA001";
      Serial.println(usn);
     }
