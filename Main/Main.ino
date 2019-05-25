@@ -10,6 +10,9 @@ void setup() {
   pinMode(9,OUTPUT);
   pinMode(10,OUTPUT);
   Serial.begin(9600);
+  Serial.println("PWM Driven LED Tunable Light Source");
+  Serial.println("Version 0.02");
+  Serial.println("Created by Matthew Agostinelli");
   
 }
 void loop() {
